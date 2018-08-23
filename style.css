@@ -1,0 +1,67 @@
+*{
+	font-family: sans-serif;
+	border:  0px;
+	box-sizing: border-box;
+}
+body{
+	padding:0;
+	margin:0;
+	background:#25e8a917;
+}
+a{
+	text-decoration: none;
+	color: deeppink;
+}
+a:hover{
+	color: blue;
+	font-size: 18px;
+}
+h1{
+	color:#ff0000;
+	text-align: center;
+}
+
+.alinhar{
+	text-align: center;
+}
+.red-color{
+	color: red;
+}
+.green-color{
+	color: lawngreen ;
+}
+table{
+	border: 1px #ccc dotted;
+	border-spacing: 0px;
+}
+tr{
+	background-color: darkgrey;
+}
+td, th{
+	padding: 10px;
+}
+th{
+	background-color:dimgrey ;
+	color: aliceblue;
+}
+ol > li:hover{
+		color: blue;
+		font-size: 18px;
+}
+
+input{
+	padding: 5px;
+	border: cadetblue 1px solid;
+	border-radius: 5px;
+}
+fieldset{
+	width:63%;
+	margin: 0 auto;
+	border: 2px solid #cecece;
+	border-radius: 6px;
+}
+#setorInputs{
+	width: 500px;
+	margin:0 auto;
+	text-align:center;
+}
