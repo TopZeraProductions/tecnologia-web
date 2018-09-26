@@ -1,0 +1,4 @@
+body{ text-align: center; font-family: monospace;background: #b0dadaa6;}
+form{ width: 300px; text-align: center; display: inline-block; background: #f6f7ee; margin-right: 20px; padding: 14px 20px;vertical-align: top; margin-bottom: 20px; border-radius: 7px;box-shadow: 0 0px 6px 0px #0000004f;}
+form input{ border-radius: 3px; border: none; height: 31px; padding-left: 10px; }
+form button{ background: #5cc56a; border: none; padding: 10px 20px; border-radius: 5px; color: #fff; font-weight: bold; }
