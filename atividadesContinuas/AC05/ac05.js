@@ -17,7 +17,10 @@ function Maior(){
 //--- Exercicio 2 ---// 
 function Palindrome(){
 	var word = document.getElementById("palavra").value;		
-	var palavra = word.split("").reverse().join("");	
+	var palavra = "";
+	for(i = word.length-1; i>=0; i--){
+		palavra += word[i];
+	}
 		
 	if(palavra == word){
 		alert(word + " é Palindrome");
@@ -43,6 +46,19 @@ function pessoa(){
 	}else{
 		alert('NOK');
 	}
-
-
 }
+
+//--- Exercicio 10 ---//
+function invertida(){
+	word = document.getElementById('word').value;
+	palavra = document.getElementById('palavra').value;
+	
+	for(i = word.length-1; i>=0; i--){
+		palavra += word[i];
+	}
+	alert(palavra);
+}
+
+
+
+
