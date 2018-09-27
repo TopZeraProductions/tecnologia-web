@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>AC 5</title>
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta charset="utf-8" />
+    <script>
+        function verificaNome(nome) {
+            if (nome == "") {
+				alert("Nome não é valido.");
+				console.log("Nome invalido.");
+				return false;			               
+
+            }
+				alert("Nome OK.");
+				console.log("Nome OK.");
+				return true; 
+			
+			
+
+            
+
+        }
+
+        function verificaEscola(escola) {
+
+            var listaEscolas = ["esc1", "esc2", "esc3", "esc4"];
+            var esc = true;
+
+            for (i = 0; i < listaEscolas.length; i++) {
+
+                if (escola.value == listaEscolas[i]) {
+
+                    alert("Escola ok");
+                    console.log("Escola ok");
+                    return true;
+
+                }
+
+            }
+
+            alert("Escola não está na lista");
+            console.log("Escola não está na lista");
+            return false;
+
+        }
+
+        function verificaIdade(idade) {
+
+
+            var ano = 2018;
+            var nascEm = 0;
+
+            if (idade.value == "") return false;
+
+            var valIdade = Number(idade.value);
+			
+			if(valIdade){
+			
+				
+				if (idade < 0) {
+
+					alert("Não nasceu");
+					console.log("Não nasceu");
+					return false;
+
+				}
+
+				if (idade > 120) {
+
+					alert("Já morreu");
+					console.log("Já morreu");
+					return false;
+
+				}
+			}else{
+				alert("Idade Inválida")
+				return false;
+			}
+			
+			
+            nascEm = ano - valIdade;
+
+            alert("Você nasceu em " + nascEm);
+            console.log("Você nasceu em " + nascEm);
+            return true;
+
+        }
+
+        function enviar() {
+
+            var nome = document.getElementById('nome').value;
+            var escola = document.getElementById('escola');
+            var idade = document.getElementById('idade');
+
+            verificaNome(nome);
+            verificaEscola(escola);
+            verificaIdade(idade);
+
+        }
+    </script>
+</head>
+<body>
+
+    <form onsubmit='javascript: return enviar()'>
+
+        <label for="nome">Nome</label> <br>
+        <input type="text" id="nome"> <br>
+
+        <label for="escola">Escola</label> <br>
+        <input type="text" id="escola"> <br>
+
+        <label for="idade">Idade</label> <br>
+        <input type="text" id="idade"> <br>
+
+        <button>Enviar</button>
+
+    </form>
+
+</body>
+</html>
