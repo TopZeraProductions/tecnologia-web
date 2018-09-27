@@ -20,7 +20,9 @@ function Palindrome(){
 	var palavra = "";
 	for(i = word.length-1; i>=0; i--){
 		palavra += word[i];
+		alert(word[i]);
 	}
+
 		
 	if(palavra == word){
 		alert(word + " é Palindrome");
@@ -31,8 +33,22 @@ function Palindrome(){
 
 //--- Exercicio 3 ---// 
 function caracteres(){	
-	var caracter = document.getElementById("caracter").value;
-	alert(caracter);
+	var word = document.getElementById("caracter").value;
+	if(word.length >= 6){
+		var first = "";	
+		var last  = "";	
+		for(i = 0; i < 3; i++){
+			first += word[i];
+		}	
+		// for(x = word.length-3; x <= word.length; x--){
+		// 	last += word[x];
+		// }
+
+		alert(word.length-3);
+		return true;
+	}
+	alert("Palavra inválida");	
+	return false;
 }
 
 //--- Exercicio 6 ---// 
@@ -48,10 +64,28 @@ function pessoa(){
 	}
 }
 
+//--- Exercicio 7 ---//
+function removePar(){
+	var list = document.getElementById('list').value;
+	var list_new = [];
+	var index = "";
+
+	for(i = 0; i < list.length; i++){
+		list= list.replace(",","");	
+		
+		list_new.push(list[i]);	
+		if(list_new[i] % 2 == 0){
+			list_new[i] = 1;
+		}
+	}
+	alert(list_new);
+	return true
+}
+
 //--- Exercicio 10 ---//
 function invertida(){
-	word = document.getElementById('word').value;
-	palavra = document.getElementById('palavra').value;
+	var word = document.getElementById('word').value;
+	var palavra = document.getElementById('palavra').value;
 	
 	for(i = word.length-1; i>=0; i--){
 		palavra += word[i];
