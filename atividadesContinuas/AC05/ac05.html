@@ -5,7 +5,7 @@
 	<script type="text/javascript" src="ac05.js"></script>
 </head>
 <body>
-	<form onsubmit="javascript: return Maior();">
+	<form onsubmit="javascript: return maior();">
 	<small>1º exercicio</small>
 	<h2>Maior número</h2>
 		<input type="text" id="n1" placeholder="Digite o primeiro nº"><br><br>
@@ -13,7 +13,7 @@
 		<button type="submit">Compare</button>
 	</form>
 	
-	<form onsubmit="javascript: return Palindrome();">
+	<form onsubmit="javascript: return palindrome();">
 		<small>2º exercicio</small>
 		<h2>Palavra Palindrome</h2>
 		<input type="text" id="palavra" placeholder="Digite a palavra"><br><br>
@@ -26,9 +26,19 @@
 		<input type="text" id="caracter" placeholder="Digite os caracteres"><br><br>
 		<button type="submit">Compare</button>
 	</form>
+
+	<form onsubmit="javascript: return uniao();">
+		<small>4º exercicio</small>
+		<h2>União de dois arranjos</h2>
+		<input type="text" id="arranjo1" placeholder="Digite o 1º arranjo:"><br><br>
+		<input type="text" id="arranjo2" placeholder="Digite o 2º arranjo:"><br>
+		<small>*Digite os valores seguidos por (,)</small>	<br><br>
+		<button type="submit">Enviar</button>
+
+	</form>
 	
 	<form onsubmit="pessoa();">
-		<small>5º exercicio</small>
+		<small>6º exercicio</small>
 		<h2>Formulário Pessoa</h2>
 		<input type="text" id="nome" name="nome" placeholder="Digite o nome:"><br><br>
 		<input type="text" id="idade" name="idade" placeholder="Digite a idade:"><br><br>

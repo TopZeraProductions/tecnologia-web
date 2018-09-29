@@ -1,5 +1,5 @@
 //--- Exercicio 1 ---// 
-function Maior(){	
+function maior(){	
 	var n1 = parseInt(document.getElementById("n1").value);	
 	var n2 = parseInt(document.getElementById('n2').value);	
 	
@@ -15,7 +15,7 @@ function Maior(){
 }
 
 //--- Exercicio 2 ---// 
-function Palindrome(){
+function palindrome(){
 	var word = document.getElementById("palavra").value;		
 	var palavra = "";
 	for(i = word.length-1; i>=0; i--){
@@ -51,6 +51,16 @@ function caracteres(){
 	return false;
 }
 
+//--- Exercicio 4 ---// 
+function uniao(){
+	var list1 = document.getElementById('arranjo1').value;
+	var list2 = document.getElementById('arranjo2').value;
+	var teste = list1.split(",");
+	var teste = teste.join('/');
+	alert(teste);
+}
+
+
 //--- Exercicio 6 ---// 
 function pessoa(){
 	var nome 	= document.getElementById('nome').value;
@@ -66,20 +76,13 @@ function pessoa(){
 
 //--- Exercicio 7 ---//
 function removePar(){
-	var list = document.getElementById('list').value;
-	var list_new = [];
-	var index = "";
-
-	for(i = 0; i < list.length; i++){
-		list= list.replace(",","");	
-		
-		list_new.push(list[i]);	
-		if(list_new[i] % 2 == 0){
-			list_new[i] = 1;
+	var list = document.getElementById('list').value.split(",");
+	for(i = 0; i< list.length; i++){
+		if(list[i] % 2 == 0){
+			list[i] = 1;
 		}
 	}
-	alert(list_new);
-	return true
+	alert(list);
 }
 
 //--- Exercicio 10 ---//
