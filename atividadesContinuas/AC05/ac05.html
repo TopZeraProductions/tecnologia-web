@@ -34,7 +34,16 @@
 		<input type="text" id="arranjo2" placeholder="Digite o 2º arranjo:"><br>
 		<small>*Digite os valores seguidos por (,)</small>	<br><br>
 		<button type="submit">Enviar</button>
+	</form>
 
+
+	<form onsubmit="javascript: return interseccao();">
+		<small>5º exercicio</small>
+		<h2>Intersecção de dois arranjos</h2>
+		<input type="text" id="list1" placeholder="Digite o 1º arranjo:"><br><br>
+		<input type="text" id="list2" placeholder="Digite o 2º arranjo:"><br>
+		<small>*Digite os valores seguidos por (,)</small>	<br><br>
+		<button type="submit">Enviar</button>
 	</form>
 	
 	<form onsubmit="pessoa();">
@@ -52,6 +61,27 @@
 		<h2>Remover Pares</h2>
 		<input type="text" id="list" placeholder="Digite os nº do arranjo"><br>
 		<small>*Digite os valores seguidos por (,)</small>	<br><br>	
+		<button type="submit">Enviar</button>
+	</form>
+
+	<form onsubmit="sensitive();">
+		<small>8º exercicio</small>
+		<h2>Caixa Alta</h2>
+		<input type="text" id="word_sensitive" placeholder="Digite os caracteres"><br><br>
+		<button type="submit">Enviar</button>
+	</form>	
+
+	<form onsubmit="vogais();">
+		<small>9º exercicio</small>
+		<h2>Vogais</h2>
+		<input type="text" id="vogal" placeholder="Digite uma palavra"><br><br>
+		<button type="submit">Enviar</button>
+	</form>
+
+	<form onsubmit="invertida();">
+		<small>10º exercicio</small>
+		<h2>Palavra Invertida</h2>
+		<input type="text" id="word" placeholder="Digite os caracteres"><br><br>
 		<button type="submit">Enviar</button>
 	</form>
 </body>

@@ -18,15 +18,20 @@ function maior(){
 function palindrome(){
 	var word = document.getElementById("palavra").value;		
 	var palavra = "";
-	for(i = word.length-1; i>=0; i--){
-		palavra += word[i];
-		alert(word[i]);
+	if(word != ""){
+		for(i = word.length-1; i>=0; i--){
+			palavra += word[i];
+			// alert(word[i]);
+		}		
+		if(palavra == word){
+			alert(word + " é Palindrome");
+		}else{
+			alert(word + " não é Palindrome");
+		}	
+		return true;
 	}		
-	if(palavra == word){
-		alert(word + " é Palindrome");
-	}else{
-		alert(word + " não é Palindrome");
-	}		
+	alert("Digite uma palavra");
+	return false;
 }
 
 //--- Exercicio 3 ---// 
@@ -53,12 +58,58 @@ function caracteres(){
 }
 
 //--- Exercicio 4 ---// 
+// function uniao(){
+// 	var list1 = document.getElementById('arranjo1').value.split(",");
+// 	var list2 = document.getElementById('arranjo2').value.split(",");
+// 	if(list1 != "" && list2 != ""){
+// 		var list_new =[...new Set([...list1,...list2])];
+// 		alert(list_new);
+// 		return true;
+// 	}
+// 	alert("Preencha o formulário");
+// 	return false;	
+// }
+
 function uniao(){
-	var list1 = document.getElementById('arranjo1').value;
-	var list2 = document.getElementById('arranjo2').value;
-	var teste = list1.split(",");
-	var teste = teste.join('/');
-	alert(teste);
+	var list = document.getElementById('arranjo1').value.split(",").concat(document.getElementById('arranjo2').value.split(","));
+	var list_new = [];
+	var dic = {};
+	if(list != ""){		
+		for(x = 0; x < list.length; x++){
+			dic[list[x]] = list[x];
+		}
+
+		for(key in dic){
+			list_new.push(key);
+		}
+		
+		alert(list_new);
+		return true;
+	}
+	alert("Preencha o formulário");
+	return false;	
+}
+
+
+//--- Exercicio 5 ---//
+function interseccao(){
+	var list1 = document.getElementById('list1').value.split(",");
+	var list2 = document.getElementById('list2').value.split(",");
+	var list_new = [];
+
+	if(list1 != '' && list2 != ''){
+		for(i = 0; i < list1.length; i++){
+			for(x = 0; x < list2.length; x++){
+				if(list2[x] == list1[i]){
+					list_new.push(list2[x]);
+				}
+			}
+		}
+		alert(list_new);
+		return true;
+	}
+	alert("Preencha o formulário");
+	return false;	
 }
 
 
@@ -68,33 +119,83 @@ function pessoa(){
 	var idade 	= document.getElementById('idade').value;
 	var altura	= document.getElementById('altura').value;
 	var peso 	= document.getElementById('peso').value;
-	if(nome != '' && idade !='' && idade >= '18' && altura !='' && peso != '' && peso < '90'){
-		alert('Ok');
-	}else{
-		alert('NOK');
+	if(nome != '' && idade !='' && altura !='' && peso != ''){
+		if(idade >= '18' && peso < '90'){
+			alert('Ok');
+		}else{
+			alert('NOK');
+		}
+		return true
 	}
+	alert("Preencha o formulário");
+	return false;	
 }
 
 //--- Exercicio 7 ---//
 function removePar(){
 	var list = document.getElementById('list').value.split(",");
-	for(i = 0; i< list.length; i++){
-		if(list[i] % 2 == 0){
-			list[i] = 1;
+	if(list != ''){
+		for(i = 0; i< list.length; i++){
+			if(list[i] % 2 == 0){
+				list[i] = 1;
+			}
 		}
+		alert(list);
+		return true;
 	}
-	alert(list);
+	alert("Preencha o formulário");
+	return false;	
 }
+
+//--- Exercicio 8 ---//
+function sensitive(){
+	var word = document.getElementById('word_sensitive').value;
+	var cont = 0;
+	if(word != ""){
+		for(i = 0; i<word.length; i++){
+			if(word[i] == "A"){
+				cont++;
+			}
+		}
+		alert("A palavra digitado tem : "+cont+" A(s) em caixa alta");
+		return true;
+	}
+	alert("Digite uma palavra");
+	return false;
+}
+
+//--- Exercicio 9 ---//
+function vogais(){
+	var word = document.getElementById('vogal').value.toLowerCase();
+	var cont = 0;
+	if(word != ""){
+		for(i = 0; i < word.length; i++){
+			if(word[i] == "a" || word[i] == "e" || word[i] == "i" || word[i] == "o" || word[i] == "u"){
+				cont++
+			}
+		}
+		alert("O valor digitado contém : "+cont+" vogal(s)");
+		return true;
+	}
+	alert("Digite uma palavra");
+	return false;
+		
+} 
+
 
 //--- Exercicio 10 ---//
 function invertida(){
 	var word = document.getElementById('word').value;
-	var palavra = document.getElementById('palavra').value;
-	
-	for(i = word.length-1; i>=0; i--){
+	var palavra = '';
+	if(word != ""){
+		for(i = word.length-1; i>=0; i--){
 		palavra += word[i];
+		}
+		alert(palavra);
+		return true;
 	}
-	alert(palavra);
+	alert("Digite uma palavra");
+	return false;
 }
 
 
