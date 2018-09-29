@@ -21,9 +21,7 @@ function palindrome(){
 	for(i = word.length-1; i>=0; i--){
 		palavra += word[i];
 		alert(word[i]);
-	}
-
-		
+	}		
 	if(palavra == word){
 		alert(word + " é Palindrome");
 	}else{
@@ -37,15 +35,18 @@ function caracteres(){
 	if(word.length >= 6){
 		var first = "";	
 		var last  = "";	
+		x = 3;
 		for(i = 0; i < 3; i++){
-			first += word[i];
-		}	
-		// for(x = word.length-3; x <= word.length; x--){
-		// 	last += word[x];
-		// }
-
-		alert(word.length-3);
-		return true;
+			first+=word[i];
+			last += word.charAt(word.length-x);
+			x--;
+		}
+		if(first == last){
+			alert("Os primeiros 3 caracteres da palavra '"+word+"' são iguais aos últimos");
+			return true;
+		}
+		alert("Os primeiros 3 caracteres da palavra '"+word+"' são diferentes aos 3 últimos");
+		return false;
 	}
 	alert("Palavra inválida");	
 	return false;
