@@ -58,18 +58,6 @@ function caracteres(){
 }
 
 //--- Exercicio 4 ---// 
-// function uniao(){
-// 	var list1 = document.getElementById('arranjo1').value.split(",");
-// 	var list2 = document.getElementById('arranjo2').value.split(",");
-// 	if(list1 != "" && list2 != ""){
-// 		var list_new =[...new Set([...list1,...list2])];
-// 		alert(list_new);
-// 		return true;
-// 	}
-// 	alert("Preencha o formulário");
-// 	return false;	
-// }
-
 function uniao(){
 	var list = document.getElementById('arranjo1').value.split(",").concat(document.getElementById('arranjo2').value.split(","));
 	var list_new = [];
@@ -82,7 +70,7 @@ function uniao(){
 		for(key in dic){
 			list_new.push(key);
 		}
-		
+
 		alert(list_new);
 		return true;
 	}
